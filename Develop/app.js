@@ -10,6 +10,102 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const teamMembers = [];
+
+//Questions to fill in each team member
+
+// Manager: 
+const managerQuestions = [
+
+    {
+        type: 'input',
+        name: 'ManagerName',
+        message: 'Please enter the name of the manager or your name if you are a manager. '
+    },
+
+    {
+        type: 'input',
+        name: 'managerID',
+        message: 'Please enter the managers ID number'
+    },
+
+    {
+        type: 'input',
+        name: 'managerEmail',
+        message: 'Please enter the managers Email adress'
+    },
+
+    {
+        type: 'input',
+        name: 'officeNumber',
+        message: 'Please enter the managers office number?'
+    },
+]
+
+//Engineer: 
+const engineerQuestions = [
+
+    {
+        type: 'input',
+        name: 'engiName',
+        message: 'Please enter the name of this engineer'
+    },
+
+    {
+        type: 'input',
+        name: 'engineerID',
+        message: 'Please enter the ID number for this engineer'
+    },
+
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'Please enter the engineers email adress'
+    },
+
+    {
+        type: 'input',
+        name: 'githubProfile',
+        message: 'Please enter the engineers GitHub user name'
+    },
+]
+
+//Intern:
+const internQuestions = [
+
+    {
+        type: 'input',
+        name: 'internName',
+        message: 'Please enter the name of this intern'
+    },
+
+    {
+        type: 'input',
+        name: 'internID',
+        message: 'Please enter the ID number for this intern',
+    },
+
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'Please enter the email adress for this intern'
+    },
+
+    {
+        type: 'input',
+        name: 'school',
+        message: 'Please enter the interen attends or "N/A" ',
+    },
+]
+
+const anotherOne = [
+    {
+        type: 'list',
+        name: 'AnotherEmployee',
+        message: 'Do you need to add another employee? If no please select "Done"',
+        choices: ['Engineer', 'Intern', 'Done']
+    }
+]
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
